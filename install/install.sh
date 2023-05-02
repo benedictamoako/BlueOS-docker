@@ -137,7 +137,7 @@ then
     alias docker=dind
 fi
 
-sudo usermod -aG docker pi
+sudo usermod -aG docker reconbot
 
 # Stop and remove all docker if NO_CLEAN is not defined
 test $NO_CLEAN || (
