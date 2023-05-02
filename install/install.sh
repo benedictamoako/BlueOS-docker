@@ -160,9 +160,9 @@ curl -fsSL $ROOT/install/udev/100.autopilot.rules -o /etc/udev/rules.d/100.autop
 
 echo "Disabling automatic Link-local configuration in dhcpd.conf."
 # delete line if it already exists
-sed -i '/noipv4ll/d' /etc/dhcp/dhcpcd.conf
+sed -i '/noipv4ll/d' /etc/dhcp/dhclient.conf
 # add noipv4ll
-sed -i '$ a noipv4ll' /etc/dhcp/dhcpcd.conf
+sed -i '$ a noipv4ll' /etc/dhcp/dhclient.conf
 
 # Do necessary changes if running in a Raspiberry
 command -v raspi-config && (
